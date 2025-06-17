@@ -104,7 +104,7 @@ void sender(std::string targetaddresstring, std::string whoistalking, int target
 	    std::string fullmessage = messagehead+message;
 	    try {
 	        //attempt to send message
-	        //size_t bytes_sent = socket.send_to(boost::asio::buffer(fullmessage), server_endpoint);
+	        size_t bytes_sent = socket.send_to(boost::asio::buffer(fullmessage), server_endpoint);
 	    } catch (const boost::system::system_error& e) {
 	        std::cerr << "Error sending message: " << e.what() << std::endl;
 	        return; //exit if error
