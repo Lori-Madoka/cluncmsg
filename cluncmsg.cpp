@@ -98,7 +98,6 @@ void sender(std::string targetaddresstring, std::string whoistalking, int target
     std::string messagehead = "[" + whoistalking + "]: ";
 	while (true) {
 	    //message to send
-	    std::cout << messagehead;
 	    std::string message;
 	    std::getline(std::cin, message);
 	    std::string fullmessage = messagehead+message;
